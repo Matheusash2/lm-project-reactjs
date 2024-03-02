@@ -1,0 +1,62 @@
+@import "../styles/configs.scss";
+
+.container-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden scroll;
+  padding: 3px;
+
+  .logo {
+    margin-bottom: 60px;
+    max-width: 228px;
+  }
+
+  form {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .input {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 6px;
+      box-shadow: $grey2 0px 1px 4px;
+
+      &.focus {
+        border-color: $lightBlue1;
+        box-shadow: $lightBlue1 0px 1px 4px;
+      }
+
+      img {
+        margin-right: 10px;
+        width: 20px;
+      }
+
+      input {
+        display: flex;
+        align-items: center;
+        width: 100%;
+      }
+    }
+
+    button {
+      &.loginBtn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: $fontBold;
+      }
+      &.disabledBtn {
+        background-color: $grey2 !important;
+      }
+    }
+  }
+}

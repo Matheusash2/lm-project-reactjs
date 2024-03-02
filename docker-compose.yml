@@ -1,0 +1,19 @@
+version: '2.24.5'
+
+services:
+  react-vite-lm:
+    container_name: react-lm
+    image: react-vite
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: development # Alterado para o estágio de desenvolvimento do Dockerfile
+    ports:
+      - '8080:8080' # Porta do aplicativo React.js
+    env_file:
+      - .env
+    volumes:
+      - .:/usr/src/app # Montagem do código-fonte
+      - /usr/src/app/node_modules # Volume para node_modules
+    command: npm run dev # Alterado para o comando de desenvolvimento do Vite
+    restart: unless-stopped
