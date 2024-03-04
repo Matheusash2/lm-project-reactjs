@@ -1,12 +1,14 @@
 @import "../styles/configs.scss";
 
 .container-login {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   overflow: hidden scroll;
-  padding: 3px;
+  padding: 10px 10px;
 
   .logo {
     margin-bottom: 60px;
@@ -19,8 +21,14 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: $white;
+    border-radius: 20px;
+    height: 60%;
+    box-shadow: $grey2 0px 1px 4px;
+    padding: 0px 10px;
 
     .input {
+      background-color: $white;
       width: 100%;
       display: flex;
       align-items: center;
@@ -31,6 +39,11 @@
       box-shadow: $grey2 0px 1px 4px;
 
       &.focus {
+        border-color: $lightBlue1;
+        box-shadow: $lightBlue1 0px 1px 4px;
+      }
+
+      &:hover {
         border-color: $lightBlue1;
         box-shadow: $lightBlue1 0px 1px 4px;
       }
@@ -53,10 +66,63 @@
         align-items: center;
         justify-content: center;
         font-family: $fontBold;
+        background-color: $lightBlue1;
+        box-shadow: $grey2 0px 1px 4px;
       }
+
       &.disabledBtn {
         background-color: $grey2 !important;
       }
+
+      &.focus {
+        border-color: $lightBlue1;
+        box-shadow: $lightBlue1 0px 1px 4px;
+      }
+
+      &:hover {
+        border-color: $lightBlue1;
+        box-shadow: $lightBlue1 0px 1px 4px;
+      }
+    }
+
+    .loginFooter {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin-top: 60px;
+
+      p {
+        margin-bottom: 3px;
+        color: $lightBlue1;
+        border-radius: 3px;
+        padding: 0px 3px;
+
+        &:hover {
+          color: $white;
+          background-position: right;
+          background-color: $lightBlue1;
+          transition: background-color 0.5s ease;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: $desktopBreakpoint) {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+
+    .logo {
+      max-width: 60%;
+      margin-right: 100px;
+      flex: 1;
+      padding: 30px;
+      align-items: center;
+    }
+
+    form {
+      padding: 20px;
     }
   }
 }

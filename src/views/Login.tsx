@@ -8,6 +8,7 @@ import keyIconGrey from "../assets/images/keySolidGrey.svg";
 import { LoadingBtn } from "../components/general/LoadingBtn";
 import { AuthorizedContext } from "../App";
 import { LoginServices } from "../services/LoginServices";
+import { GetDate } from "../components/general/GetDate";
 
 const loginService = new LoginServices();
 
@@ -69,11 +70,15 @@ export const Login = () => {
         <button
           type="button"
           onClick={doLogin}
-          disabled={loading}
-          className={"loginBtn " + (userName && password ? "" : "disabledBtn")}
+          disabled={!userName || !password || loading}
+          className={"loginBtn " + (!userName || !password ? "disabledBtn disabled" : "")}
         >
           {loading ? <LoadingBtn /> : "Login"}
         </button>
+        <div className="loginFooter">
+          <p>Dinheiro rápido e fácil.</p>
+          <GetDate />
+        </div>
       </form>
     </div>
   );

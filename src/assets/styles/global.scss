@@ -24,6 +24,7 @@
 * {
   font-family: $fontRegular;
   font-size: 14px;
+  color: $black1;
 }
 
 html,
@@ -101,7 +102,7 @@ button {
 
 body {
   @media screen and (min-width: $desktopBreakpoint) {
-    background-color: $grey1;
+    background-color: $white;
   }
 }
 
