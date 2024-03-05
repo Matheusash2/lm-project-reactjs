@@ -35,7 +35,7 @@
       justify-content: center;
       align-items: center;
       border-radius: 15px;
-      padding: 3px;
+      padding: 8px;
       margin-bottom: 10px;
       box-shadow: $grey2 0px 1px 4px;
 
@@ -43,32 +43,28 @@
         border-color: $lightBlue1;
         box-shadow: $lightBlue1 0px 1px 4px;
         background-color: $lightBlue1;
-      }
 
-      &.focus {
-        border-color: $lightBlue1;
-        box-shadow: $lightBlue1 0px 1px 4px;
-        background-color: $lightBlue1;
+        p {
+          color: $white;
+        }
       }
 
       p {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         font-family: $fontBold;
         color: $lightBlue1;
-        font-size: 20px;
-        margin: 0;
+        font-size: 30px;
+        margin: 10px;
         width: 100%;
         height: 100%;
+      }
 
-        &:hover {
-          color: $white;
-        }
-
-        &.focus {
-          color: $white;
-        }
+      img {
+        margin-right: 10px;
+        margin-left: 30px;
+        width: 30px;
       }
     }
   }
