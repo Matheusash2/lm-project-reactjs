@@ -1,0 +1,83 @@
+@import "../styles/configs.scss";
+
+.container-home {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .header-home {
+    display: flex;
+    justify-content: flex-start;
+    background-color: $lightBlue1;
+    width: 100%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: $grey2 0px 1px 4px;
+  }
+
+  .container-options {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+
+    div {
+      display: flex;
+      background-color: $white;
+      width: 100%;
+      height: 20%;
+      justify-content: center;
+      align-items: center;
+      border-radius: 15px;
+      padding: 3px;
+      margin-bottom: 10px;
+      box-shadow: $grey2 0px 1px 4px;
+
+      &:hover {
+        border-color: $lightBlue1;
+        box-shadow: $lightBlue1 0px 1px 4px;
+        background-color: $lightBlue1;
+      }
+
+      &.focus {
+        border-color: $lightBlue1;
+        box-shadow: $lightBlue1 0px 1px 4px;
+        background-color: $lightBlue1;
+      }
+
+      p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: $fontBold;
+        color: $lightBlue1;
+        font-size: 20px;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+
+        &:hover {
+          color: $white;
+        }
+
+        &.focus {
+          color: $white;
+        }
+      }
+    }
+  }
+  .footer-home {
+    display: flex;
+    background-color: $lightBlue1;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: $grey2 0px -2px 4px;
+  }
+}
