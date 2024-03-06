@@ -8,6 +8,8 @@ import clientsIcon from "../assets/images/clientsSolid.svg";
 import clientsIconWhite from "../assets/images/clientsSolidWhite.svg";
 import glassIcon from "../assets/images/glassSolid.svg";
 import glassIconWhite from "../assets/images/glassSolidWhite.svg";
+import { Footer } from "../components/general/Footer";
+import { Header } from "../components/general/Header";
 
 export const Home = () => {
   const navigate = useNavigate();
@@ -34,9 +36,7 @@ export const Home = () => {
 
   return (
     <div className="container-home">
-      <div className="header-home">
-        <p>Hader do site</p>
-      </div>
+      <Header />
       <div className="container-options">
         <div
           onClick={() => navigate("/profile")}
@@ -83,9 +83,7 @@ export const Home = () => {
           <p>Pesquisa de clientes</p>
         </div>
       </div>
-      <div className="footer-home">
-        <p>Footer do site</p>
-      </div>
+      <Footer />
     </div>
   );
 };

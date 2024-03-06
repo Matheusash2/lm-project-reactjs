@@ -1,0 +1,9 @@
+@import "../styles/configs.scss";
+
+.container-header {
+  display: flex;
+  justify-content: flex-start;
+  background-color: $lightBlue1;
+  width: 100%;
+  box-shadow: $grey2 0px 1px 4px;
+}

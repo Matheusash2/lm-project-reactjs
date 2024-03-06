@@ -8,16 +8,6 @@
   align-items: center;
   flex-direction: column;
 
-  .header-home {
-    display: flex;
-    justify-content: flex-start;
-    background-color: $lightBlue1;
-    width: 100%;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    box-shadow: $grey2 0px 1px 4px;
-  }
-
   .container-options {
     display: flex;
     flex: 1;
@@ -67,13 +57,5 @@
         width: 30px;
       }
     }
-  }
-  .footer-home {
-    display: flex;
-    background-color: $lightBlue1;
-    width: 100%;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    box-shadow: $grey2 0px -2px 4px;
   }
 }

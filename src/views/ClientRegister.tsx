@@ -1,6 +1,12 @@
-export const ClientRegister = () => {
+import { Footer } from "../components/general/Footer";
+import { Header } from "../components/general/Header";
 
-    return (
-        <div>Cadastro de clientes</div>
-    )
-}
+export const ClientRegister = () => {
+  return (
+    <div>
+      <Header />
+      <div>Cadastro de clientes</div>
+      <Footer />
+    </div>
+  );
+};

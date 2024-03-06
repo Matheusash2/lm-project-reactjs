@@ -1,6 +1,12 @@
-export const ClientProfile = () => {
+import { Footer } from "../components/general/Footer";
+import { Header } from "../components/general/Header";
 
-    return (
-        <div>Perfil do cliente</div>
-    )
-}
+export const ClientProfile = () => {
+  return (
+    <div>
+      <Header />
+      <div>Perfil do cliente</div>
+      <Footer />
+    </div>
+  );
+};
