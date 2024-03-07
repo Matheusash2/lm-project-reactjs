@@ -10,6 +10,7 @@ import glassIcon from "../assets/images/glassSolid.svg";
 import glassIconWhite from "../assets/images/glassSolidWhite.svg";
 import { Footer } from "../components/general/Footer";
 import { Header } from "../components/general/Header";
+import { Layout } from "../components/general/Layout";
 
 export const Home = () => {
   const navigate = useNavigate();
@@ -35,55 +36,55 @@ export const Home = () => {
   };
 
   return (
-    <div className="container-home">
-      <Header />
-      <div className="container-options">
-        <div
-          onClick={() => navigate("/profile")}
-          onMouseEnter={() => handleMouseEnter("profile")}
-          onMouseLeave={() => handleMouseLeave("profile")}
-        >
-          <img
-            src={isHovered.profile ? userCardIconWhite : userCardIcon}
-            alt="Perfil do usuário"
-          />
-          <p>Perfil</p>
-        </div>
-        <div
-          onClick={() => navigate("/user_register")}
-          onMouseEnter={() => handleMouseEnter("userRegister")}
-          onMouseLeave={() => handleMouseLeave("userRegister")}
-        >
-          <img
-            src={isHovered.userRegister ? userPlusIconWhite : userPlusIcon}
-            alt="Cadastro de usuários"
-          />
-          <p>Cadastro de usuários</p>
-        </div>
-        <div
-          onClick={() => navigate("/client_register")}
-          onMouseEnter={() => handleMouseEnter("clientRegister")}
-          onMouseLeave={() => handleMouseLeave("clientRegister")}
-        >
-          <img
-            src={isHovered.clientRegister ? clientsIconWhite : clientsIcon}
-            alt="Cadastro de clientes."
-          />
-          <p>Cadastro de clientes</p>
-        </div>
-        <div
-          onClick={() => navigate("/client_search")}
-          onMouseEnter={() => handleMouseEnter("clientSearch")}
-          onMouseLeave={() => handleMouseLeave("clientSearch")}
-        >
-          <img
-            src={isHovered.clientSearch ? glassIconWhite : glassIcon}
-            alt="Pesquisa de clientes."
-          />
-          <p>Pesquisa de clientes</p>
+    <Layout>
+      <div className="container-home">
+        <div className="container-options">
+          <div
+            onClick={() => navigate("/profile")}
+            onMouseEnter={() => handleMouseEnter("profile")}
+            onMouseLeave={() => handleMouseLeave("profile")}
+          >
+            <img
+              src={isHovered.profile ? userCardIconWhite : userCardIcon}
+              alt="Perfil do usuário"
+            />
+            <p>Perfil</p>
+          </div>
+          <div
+            onClick={() => navigate("/user_register")}
+            onMouseEnter={() => handleMouseEnter("userRegister")}
+            onMouseLeave={() => handleMouseLeave("userRegister")}
+          >
+            <img
+              src={isHovered.userRegister ? userPlusIconWhite : userPlusIcon}
+              alt="Cadastro de usuários"
+            />
+            <p>Cadastro de usuários</p>
+          </div>
+          <div
+            onClick={() => navigate("/client_register")}
+            onMouseEnter={() => handleMouseEnter("clientRegister")}
+            onMouseLeave={() => handleMouseLeave("clientRegister")}
+          >
+            <img
+              src={isHovered.clientRegister ? clientsIconWhite : clientsIcon}
+              alt="Cadastro de clientes."
+            />
+            <p>Cadastro de clientes</p>
+          </div>
+          <div
+            onClick={() => navigate("/client_search")}
+            onMouseEnter={() => handleMouseEnter("clientSearch")}
+            onMouseLeave={() => handleMouseLeave("clientSearch")}
+          >
+            <img
+              src={isHovered.clientSearch ? glassIconWhite : glassIcon}
+              alt="Pesquisa de clientes."
+            />
+            <p>Pesquisa de clientes</p>
+          </div>
         </div>
       </div>
-      <Footer />
-    </div>
+    </Layout>
   );
 };

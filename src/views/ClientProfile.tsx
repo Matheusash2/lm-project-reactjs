@@ -1,12 +1,9 @@
-import { Footer } from "../components/general/Footer";
-import { Header } from "../components/general/Header";
+import { Layout } from "../components/general/Layout";
 
 export const ClientProfile = () => {
   return (
-    <div>
-      <Header />
+    <Layout>
       <div>Perfil do cliente</div>
-      <Footer />
-    </div>
+    </Layout>
   );
 };
