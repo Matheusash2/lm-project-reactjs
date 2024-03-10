@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { PublicInput } from "../components/general/PublicInput";
-import logo from "../assets/images/logo_LM.svg";
+import logo from "../assets/images/logo.svg";
 import userIcon from "../assets/images/userSolid.svg";
 import userIconGrey from "../assets/images/userSolidGrey.svg";
 import keyIcon from "../assets/images/keySolid.svg";

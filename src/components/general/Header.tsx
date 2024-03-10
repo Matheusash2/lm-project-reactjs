@@ -1,13 +1,18 @@
 import { LoginServices } from "../../services/LoginServices";
 import { AuthorizedContext } from "../../App";
 import { useContext } from "react";
-import logoIcon from "../../assets/images/logo_LM.svg";
+import logoIcon from "../../assets/images/logoIcon.svg";
 import logoutIcon from "../../assets/images/logoutSolid.svg";
 import { useNavigate } from "react-router-dom";
+import menuIcon from "../../assets/images/barsSolid.svg";
 
 const loginServices = new LoginServices();
 
-export const Header = () => {
+type  HeaderTypeSProps = {
+  onToggleMenu: () => void;
+}
+
+export const Header: React.FC<HeaderTypeSProps> = ({onToggleMenu}) => {
   const { setToken } = useContext(AuthorizedContext);
   const navigate = useNavigate();
 
@@ -16,9 +21,15 @@ export const Header = () => {
     navigate("/");
   };
 
+  const mobile = window.innerWidth <= 768;
   return (
     <div className="container-header">
       <div className="navigation-header">
+      {!mobile && (
+        <div className="toggle-menu-button" onClick={onToggleMenu}>
+          <img src={menuIcon} className="menu-button" alt="Menu" />
+        </div>
+      )}
         <img
           src={logoIcon}
           alt="Logo lm empréstimos"

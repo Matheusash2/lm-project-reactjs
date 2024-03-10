@@ -8,5 +8,10 @@
 
   .content-layout {
     flex: 1;
+    display: flex;
+
+    .content {
+      flex: 1;
+    }
   }
 }

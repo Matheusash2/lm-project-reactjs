@@ -5,26 +5,36 @@ import arrowLeftIcon from "../../assets/images/caretLeftSolid.svg";
 
 export const Footer = () => {
   const navigate = useNavigate();
-  const mobile = window.innerWidth <= 992;
+  const mobile = window.innerWidth <= 768;
 
   return (
     <>
-      {mobile ? (
+      {mobile && (
         <nav className="container-footer">
           <ul className="navigation-footer">
             <li>
-              <img src={arrowLeftIcon} onClick={() => navigate(-1)} alt="Voltar"/>
+              <img
+                src={arrowLeftIcon}
+                onClick={() => navigate(-1)}
+                alt="Voltar"
+              />
             </li>
             <li>
-              <img src={homeIcon} onClick={() => navigate("/home")} alt="Home"/>
+              <img
+                src={homeIcon}
+                onClick={() => navigate("/home")}
+                alt="Home"
+              />
             </li>
             <li>
-              <img src={userIcon} onClick={() => navigate("/profile")} alt="Perfil do usuário"/>
+              <img
+                src={userIcon}
+                onClick={() => navigate("/profile")}
+                alt="Perfil do usuário"
+              />
             </li>
           </ul>
         </nav>
-      ) : (
-        <></>
       )}
     </>
   );

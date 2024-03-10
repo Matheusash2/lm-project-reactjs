@@ -16,6 +16,11 @@
     margin: 0 30px;
     flex: 1;
 
+    .toggle-menu-button {
+      display: flex;
+      width: 32px;
+    }
+
     .logo-header {
       display: flex;
       height: 32px;

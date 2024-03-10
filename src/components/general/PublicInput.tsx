@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-type PublicInputType = {
+type PublicInputTypeProps = {
   icon?: string;
   alt?: string;
   name: string;
@@ -9,7 +9,7 @@ type PublicInputType = {
   setValue(s: string): void;
 };
 
-export const PublicInput: React.FC<PublicInputType> = ({
+export const PublicInput: React.FC<PublicInputTypeProps> = ({
   icon,
   alt,
   name,
