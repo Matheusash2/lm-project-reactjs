@@ -1,6 +1,6 @@
 export const LoadingBtn = () => {
     return (
-      <div className="lds-ring">
+      <div className="lds-ring-btn">
         <div></div>
         <div></div>
         <div></div>

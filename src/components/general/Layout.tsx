@@ -18,7 +18,7 @@ export const Layout: React.FC<LayoutTypesProps> = ({ children, isHome }) => {
 
   return (
     <div className="container-layout">
-      <Header onToggleMenu={toggleMenu}/>
+      <Header onToggleMenu={toggleMenu} isOpen={isOpen}/>
       <div className="content-layout">
         {mobile && isHome && <MenuOptions />}
         {!mobile && isOpen && <MenuOptions />}
