@@ -36,10 +36,22 @@ export const Profile = () => {
             <div className="profile-avatar">
               <img src={avatarIcon} alt="Avatar do usuário" />
             </div>
-            <div className="profile-data-user">
-              <p>Name: {name}</p>
-              <p>Name de usuário: {userName}</p>
+            <div className="profile-data">
+              <div className="profile-tittle">
+                <h1>Dados do Usuário</h1>
+              </div>
+              <div className="profile-data-user">
+                <p>
+                  Nome: <span>{name}</span>
+                </p>
+                <p>
+                  Nome de usuário: <span>{userName}</span>
+                </p>
+              </div>
             </div>
+          </div>
+          <div className="profile-details">
+            <h1>detalhes</h1>
           </div>
         </div>
       )}

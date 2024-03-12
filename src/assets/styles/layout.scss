@@ -9,10 +9,17 @@
   .content-layout {
     flex: 1;
     display: flex;
+    background-color: rgba($grey1, 0.3);
 
-    .content {
+    .container-content {
       flex: 1;
       display: flex;
+      padding: 10px;
+
+      .content {
+        flex: 1;
+        background-color: $white;
+      }
     }
   }
 }

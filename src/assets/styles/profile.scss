@@ -1,33 +1,73 @@
 @import "./configs.scss";
 
 .container-profile {
+  display: flex;
+  flex: 1;
+  align-items: flex-start;
+  flex-direction: column;
+
+  .container-profile-data {
     display: flex;
-    flex: 1;
-    align-items: flex-start;
+    align-items: center;
+    box-shadow: $grey2 0px 1px 4px;
+    padding: 20px 20px 20px 20px;
+    width: 100%;
 
-    .container-profile-data {
+    .profile-avatar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 10px;
+
+      img {
         display: flex;
-        align-items: center;
-        justify-content: center;
-
-        .profile-avatar {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 20px 20px 0px;
-
-            img {
-                display: flex;
-                width: 80px;
-            }
-
-        }
-
-        .profile-data-user {
-
-            p {
-
-            }
-        }
+        width: 80px;
+      }
     }
+
+    .profile-data {
+      flex: 1;
+
+      .profile-tittle {
+        border-bottom: 1px solid $grey2;
+        margin: 0px 0px 5px 0px;
+
+        h1 {
+          font-size: 16px;
+          color: $lightBlue1;
+          font-family: $fontBold;
+          font-weight: 700;
+        }
+      }
+
+      .profile-data-user {
+        display: flex;
+        flex-direction: column;
+
+        p {
+          margin-bottom: 0;
+          font-weight: 500;
+
+          span {
+            font-family: $fontBold;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+
+  .profile-details {
+
+  }
+
+  @media screen and (min-width: $desktopBreakpoint) {
+    .container-profile-data {
+      .profile-avatar {
+        img {
+          width: 120px;
+        }
+      }
+    }
+  }
 }
