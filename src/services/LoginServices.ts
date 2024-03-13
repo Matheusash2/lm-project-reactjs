@@ -13,6 +13,7 @@ export class LoginServices extends HttpApiServices {
         localStorage.setItem("userName", user.userName);
         localStorage.setItem("id", user.id);
         localStorage.setItem("name", user.name);
+        localStorage.setItem("lastName", user.lastName);
       }
     }
     setToken(data.access_token);

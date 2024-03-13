@@ -5,6 +5,7 @@ import avatarIcon from "../assets/images/avatarSolidGrey.svg";
 
 export const Profile = () => {
   const [name, setName] = useState("");
+  const [lastName, setLastName] = useState("");
   const [userName, setUserName] = useState("");
   const [id, setId] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -14,6 +15,7 @@ export const Profile = () => {
       try {
         setIsLoading(true);
         setName(localStorage.getItem("name") || "");
+        setLastName(localStorage.getItem("lastName") || "");
         setUserName(localStorage.getItem("userName") || "");
         setId(localStorage.getItem("id") || "");
         setIsLoading(false);
@@ -42,10 +44,13 @@ export const Profile = () => {
               </div>
               <div className="profile-data-user">
                 <p>
+                  Nome de usuário: <span>{userName}</span>
+                </p>
+                <p>
                   Nome: <span>{name}</span>
                 </p>
                 <p>
-                  Nome de usuário: <span>{userName}</span>
+                  Sobrenome: <span>{lastName}</span>
                 </p>
               </div>
             </div>
