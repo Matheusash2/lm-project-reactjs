@@ -7,7 +7,6 @@ export const Profile = () => {
   const [name, setName] = useState('');
   const [lastName, setLastName] = useState('');
   const [userName, setUserName] = useState('');
-  const [id, setId] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
@@ -17,7 +16,6 @@ export const Profile = () => {
         setName(localStorage.getItem('name') || '');
         setLastName(localStorage.getItem('lastName') || '');
         setUserName(localStorage.getItem('userName') || '');
-        setId(localStorage.getItem('id') || '');
         setIsLoading(false);
       } catch (e: any) {
         setIsLoading(false);
