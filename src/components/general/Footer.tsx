@@ -1,7 +1,7 @@
-import { useNavigate } from "react-router-dom";
-import userIcon from "../../assets/images/userSolid.svg";
-import homeIcon from "../../assets/images/houseSolid.svg";
-import arrowLeftIcon from "../../assets/images/caretLeftSolid.svg";
+import { useNavigate } from 'react-router-dom';
+import userIcon from '../../assets/images/userSolid.svg';
+import homeIcon from '../../assets/images/houseSolid.svg';
+import arrowLeftIcon from '../../assets/images/caretLeftSolid.svg';
 
 export const Footer = () => {
   const navigate = useNavigate();
@@ -22,14 +22,14 @@ export const Footer = () => {
             <li>
               <img
                 src={homeIcon}
-                onClick={() => navigate("/home")}
+                onClick={() => navigate('/home')}
                 alt="Home"
               />
             </li>
             <li>
               <img
                 src={userIcon}
-                onClick={() => navigate("/profile")}
+                onClick={() => navigate('/profile')}
                 alt="Perfil do usuário"
               />
             </li>

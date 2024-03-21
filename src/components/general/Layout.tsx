@@ -1,7 +1,7 @@
-import { ReactElement, useState } from "react";
-import { Footer } from "./Footer";
-import { Header } from "./Header";
-import { MenuOptions } from "./MenuOptions";
+import { ReactElement, useState } from 'react';
+import { Footer } from './Footer';
+import { Header } from './Header';
+import { MenuOptions } from './MenuOptions';
 
 type LayoutTypesProps = {
   children: ReactElement;

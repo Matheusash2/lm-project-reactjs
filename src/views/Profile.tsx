@@ -1,27 +1,27 @@
-import { useEffect, useState } from "react";
-import { Layout } from "../components/general/Layout";
-import { Loading } from "../components/general/Loading";
-import avatarIcon from "../assets/images/avatarSolidGrey.svg";
+import { useEffect, useState } from 'react';
+import { Layout } from '../components/general/Layout';
+import { Loading } from '../components/general/Loading';
+import avatarIcon from '../assets/images/avatarSolidGrey.svg';
 
 export const Profile = () => {
-  const [name, setName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [userName, setUserName] = useState("");
-  const [id, setId] = useState("");
+  const [name, setName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [userName, setUserName] = useState('');
+  const [id, setId] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const userData = () => {
       try {
         setIsLoading(true);
-        setName(localStorage.getItem("name") || "");
-        setLastName(localStorage.getItem("lastName") || "");
-        setUserName(localStorage.getItem("userName") || "");
-        setId(localStorage.getItem("id") || "");
+        setName(localStorage.getItem('name') || '');
+        setLastName(localStorage.getItem('lastName') || '');
+        setUserName(localStorage.getItem('userName') || '');
+        setId(localStorage.getItem('id') || '');
         setIsLoading(false);
       } catch (e: any) {
         setIsLoading(false);
-        console.log("Erro ao caregar dados do usuário: ", e);
+        console.log('Erro ao caregar dados do usuário: ', e);
       }
     };
 

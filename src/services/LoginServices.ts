@@ -1,19 +1,19 @@
-import { HttpApiServices } from "./HttpApiServices";
+import { HttpApiServices } from './HttpApiServices';
 
 export class LoginServices extends HttpApiServices {
   async login(body: any, setToken: any) {
-    const { data } = await this.post("/login", body);
+    const { data } = await this.post('/login', body);
 
     if (data) {
-      localStorage.setItem("token", data.access_token);
+      localStorage.setItem('token', data.access_token);
 
-      const userResponse = await this.get("/user");
+      const userResponse = await this.get('/user');
       if (userResponse && userResponse.data) {
         const user = userResponse.data;
-        localStorage.setItem("userName", user.userName);
-        localStorage.setItem("id", user.id);
-        localStorage.setItem("name", user.name);
-        localStorage.setItem("lastName", user.lastName);
+        localStorage.setItem('userName', user.userName);
+        localStorage.setItem('id', user.id);
+        localStorage.setItem('name', user.name);
+        localStorage.setItem('lastName', user.lastName);
       }
     }
     setToken(data.access_token);
@@ -21,6 +21,6 @@ export class LoginServices extends HttpApiServices {
 
   logout(setToken: any) {
     localStorage.clear();
-    setToken("");
+    setToken('');
   }
 }

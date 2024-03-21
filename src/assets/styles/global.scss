@@ -1,24 +1,24 @@
-@import "bootstrap/scss/bootstrap.scss";
-@import "../styles/configs.scss";
+@import 'bootstrap/scss/bootstrap.scss';
+@import '../styles/configs.scss';
 
 @font-face {
   font-family: $fontRegular;
-  src: url("../fonts/Nunito-Regular.ttf");
+  src: url('../fonts/Nunito-Regular.ttf');
 }
 
 @font-face {
   font-family: $fontBold;
-  src: url("../fonts/Nunito-Bold.ttf");
+  src: url('../fonts/Nunito-Bold.ttf');
 }
 
 @font-face {
   font-family: $fontLight;
-  src: url("../fonts/Nunito-Light.ttf");
+  src: url('../fonts/Nunito-Light.ttf');
 }
 
 @font-face {
   font-family: $fontItalic;
-  src: url("../fonts/Nunito-Italic.ttf");
+  src: url('../fonts/Nunito-Italic.ttf');
 }
 
 * {
@@ -129,12 +129,12 @@ body {
   }
 }
 
-@import "../styles/login.scss";
-@import "../styles/loading.scss";
-@import "../styles/loadingBtn.scss";
-@import "../styles/home.scss";
-@import "../styles/header.scss";
-@import "../styles/footer.scss";
-@import "../styles/layout.scss";
-@import "../styles/menuOptions.scss";
-@import "../styles/profile.scss";
+@import '../styles/login.scss';
+@import '../styles/loading.scss';
+@import '../styles/loadingBtn.scss';
+@import '../styles/home.scss';
+@import '../styles/header.scss';
+@import '../styles/footer.scss';
+@import '../styles/layout.scss';
+@import '../styles/menuOptions.scss';
+@import '../styles/profile.scss';

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 type PublicInputTypeProps = {
   icon?: string;
@@ -19,7 +19,7 @@ export const PublicInput: React.FC<PublicInputTypeProps> = ({
 }) => {
   const [focus, setFocus] = useState<boolean>(false);
   return (
-    <div className={"input " + (focus ? "focus" : "")}>
+    <div className={'input ' + (focus ? 'focus' : '')}>
       <img src={icon} alt={alt} />
       <input
         name={name}

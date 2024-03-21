@@ -1,4 +1,4 @@
-@import "../styles/configs.scss";
+@import '../styles/configs.scss';
 
 .container-footer {
   display: flex;
@@ -17,11 +17,10 @@
     padding: 0;
 
     li {
-
-        img {
-            width: 30px;
-            height: 30px;
-        }
+      img {
+        width: 30px;
+        height: 30px;
+      }
     }
   }
 }

@@ -1,13 +1,13 @@
-import { useNavigate } from "react-router-dom";
-import { useState } from "react";
-import userCardIcon from "../../assets/images/userCardSolid.svg";
-import userCardIconWhite from "../../assets/images/userCardSolidWhite.svg";
-import userPlusIcon from "../../assets/images/userPlusSolid.svg";
-import userPlusIconWhite from "../../assets/images/userPlusSolidWhite.svg";
-import clientsIcon from "../../assets/images/clientsSolid.svg";
-import clientsIconWhite from "../../assets/images/clientsSolidWhite.svg";
-import glassIcon from "../../assets/images/glassSolid.svg";
-import glassIconWhite from "../../assets/images/glassSolidWhite.svg";
+import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+import userCardIcon from '../../assets/images/userCardSolid.svg';
+import userCardIconWhite from '../../assets/images/userCardSolidWhite.svg';
+import userPlusIcon from '../../assets/images/userPlusSolid.svg';
+import userPlusIconWhite from '../../assets/images/userPlusSolidWhite.svg';
+import clientsIcon from '../../assets/images/clientsSolid.svg';
+import clientsIconWhite from '../../assets/images/clientsSolidWhite.svg';
+import glassIcon from '../../assets/images/glassSolid.svg';
+import glassIconWhite from '../../assets/images/glassSolidWhite.svg';
 
 export const MenuOptions = () => {
   const navigate = useNavigate();
@@ -37,9 +37,9 @@ export const MenuOptions = () => {
     <div className="container-options">
       <div className="container-menu">
         <div
-          onClick={() => navigate("/profile")}
-          onMouseEnter={() => handleMouseEnter("profile")}
-          onMouseLeave={() => handleMouseLeave("profile")}
+          onClick={() => navigate('/profile')}
+          onMouseEnter={() => handleMouseEnter('profile')}
+          onMouseLeave={() => handleMouseLeave('profile')}
         >
           <img
             src={isHovered.profile ? userCardIconWhite : userCardIcon}
@@ -48,9 +48,9 @@ export const MenuOptions = () => {
           <p>Perfil</p>
         </div>
         <div
-          onClick={() => navigate("/user_register")}
-          onMouseEnter={() => handleMouseEnter("userRegister")}
-          onMouseLeave={() => handleMouseLeave("userRegister")}
+          onClick={() => navigate('/user_register')}
+          onMouseEnter={() => handleMouseEnter('userRegister')}
+          onMouseLeave={() => handleMouseLeave('userRegister')}
         >
           <img
             src={isHovered.userRegister ? userPlusIconWhite : userPlusIcon}
@@ -59,9 +59,9 @@ export const MenuOptions = () => {
           <p>Cadastro de usuários</p>
         </div>
         <div
-          onClick={() => navigate("/client_register")}
-          onMouseEnter={() => handleMouseEnter("clientRegister")}
-          onMouseLeave={() => handleMouseLeave("clientRegister")}
+          onClick={() => navigate('/client_register')}
+          onMouseEnter={() => handleMouseEnter('clientRegister')}
+          onMouseLeave={() => handleMouseLeave('clientRegister')}
         >
           <img
             src={isHovered.clientRegister ? clientsIconWhite : clientsIcon}
@@ -70,9 +70,9 @@ export const MenuOptions = () => {
           <p>Cadastro de clientes</p>
         </div>
         <div
-          onClick={() => navigate("/client_search")}
-          onMouseEnter={() => handleMouseEnter("clientSearch")}
-          onMouseLeave={() => handleMouseLeave("clientSearch")}
+          onClick={() => navigate('/client_search')}
+          onMouseEnter={() => handleMouseEnter('clientSearch')}
+          onMouseLeave={() => handleMouseLeave('clientSearch')}
         >
           <img
             src={isHovered.clientSearch ? glassIconWhite : glassIcon}

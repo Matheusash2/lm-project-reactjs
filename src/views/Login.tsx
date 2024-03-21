@@ -1,22 +1,22 @@
-import { useContext, useEffect, useState } from "react";
-import { PublicInput } from "../components/general/PublicInput";
-import logo from "../assets/images/logo.svg";
-import userIcon from "../assets/images/userSolid.svg";
-import userIconGrey from "../assets/images/userSolidGrey.svg";
-import keyIcon from "../assets/images/keySolid.svg";
-import keyIconGrey from "../assets/images/keySolidGrey.svg";
-import { LoadingBtn } from "../components/general/LoadingBtn";
-import { AuthorizedContext } from "../App";
-import { LoginServices } from "../services/LoginServices";
-import { GetDate } from "../components/general/GetDate";
+import { useContext, useEffect, useState } from 'react';
+import { PublicInput } from '../components/general/PublicInput';
+import logo from '../assets/images/logo.svg';
+import userIcon from '../assets/images/userSolid.svg';
+import userIconGrey from '../assets/images/userSolidGrey.svg';
+import keyIcon from '../assets/images/keySolid.svg';
+import keyIconGrey from '../assets/images/keySolidGrey.svg';
+import { LoadingBtn } from '../components/general/LoadingBtn';
+import { AuthorizedContext } from '../App';
+import { LoginServices } from '../services/LoginServices';
+import { GetDate } from '../components/general/GetDate';
 
 const loginService = new LoginServices();
 
 export const Login = () => {
-  const [userName, setUserName] = useState<string>("");
-  const [password, setPassword] = useState<string>("");
+  const [userName, setUserName] = useState<string>('');
+  const [password, setPassword] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
-  const [error, setError] = useState<string>("");
+  const [error, setError] = useState<string>('');
 
   useEffect(() => {}, []);
 
@@ -24,25 +24,25 @@ export const Login = () => {
 
   const doLogin = async () => {
     try {
-      setError("");
+      setError('');
       if (
         !userName ||
         userName.trim().length < 4 ||
         !password ||
         password.trim().length < 4
       ) {
-        setError("Favor preencher corretamente os campos.");
+        setError('Favor preencher corretamente os campos.');
       }
       setLoading(true);
       await loginService.login({ userName, password }, setToken);
       setLoading(false);
     } catch (e: any) {
-      console.log("Erro ao efetuar o login:", e);
+      console.log('Erro ao efetuar o login:', e);
       setLoading(false);
       if (e?.response?.data?.message) {
         return setError(e?.response?.data?.message);
       }
-      return setError("Erro ao tentar efetuar novamente o login.");
+      return setError('Erro ao tentar efetuar novamente o login.');
     }
   };
 
@@ -71,9 +71,11 @@ export const Login = () => {
           type="button"
           onClick={doLogin}
           disabled={!userName || !password || loading}
-          className={"loginBtn " + (!userName || !password ? "disabledBtn disabled" : "")}
+          className={
+            'loginBtn ' + (!userName || !password ? 'disabledBtn disabled' : '')
+          }
         >
-          {loading ? <LoadingBtn /> : "Login"}
+          {loading ? <LoadingBtn /> : 'Login'}
         </button>
         <div className="loginFooter">
           <p>Dinheiro rápido e fácil.</p>
