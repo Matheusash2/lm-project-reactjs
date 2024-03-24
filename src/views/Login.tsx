@@ -51,32 +51,36 @@ export const Login = () => {
       <img src={logo} alt="Logo da LM" className="logo" />
       <form>
         {error && <p className="error">{error}</p>}
-        <PublicInput
-          icon={userName ? userIcon : userIconGrey}
-          name="Nome do usuário"
-          type="text"
-          alt="Nome do usuário"
-          value={userName}
-          setValue={setUserName}
-        />
-        <PublicInput
-          icon={password ? keyIcon : keyIconGrey}
-          name="Senha do usuário"
-          type="password"
-          alt="Senha do usuário"
-          value={password}
-          setValue={setPassword}
-        />
-        <button
-          type="button"
-          onClick={doLogin}
-          disabled={!userName || !password || loading}
-          className={
-            'loginBtn ' + (!userName || !password ? 'disabledBtn disabled' : '')
-          }
-        >
-          {loading ? <LoadingBtn /> : 'Login'}
-        </button>
+        <div>
+          <PublicInput
+            icon={userName ? userIcon : userIconGrey}
+            name="Nome do usuário"
+            type="text"
+            alt="Nome do usuário"
+            value={userName}
+            setValue={setUserName}
+          />
+          <PublicInput
+            icon={password ? keyIcon : keyIconGrey}
+            name="Senha do usuário"
+            type="password"
+            alt="Senha do usuário"
+            value={password}
+            setValue={setPassword}
+          />
+          <button
+            type="button"
+            onClick={doLogin}
+            disabled={!userName || !password || loading}
+            className={
+              'loginBtn ' +
+              (!userName || !password ? 'disabledBtn disabled' : '')
+            }
+          >
+            {loading ? <LoadingBtn /> : 'Login'}
+          </button>
+        </div>
+
         <div className="loginFooter">
           <p>Dinheiro rápido e fácil.</p>
           <GetDate />
