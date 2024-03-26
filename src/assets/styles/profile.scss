@@ -9,15 +9,15 @@
   .container-profile-data {
     display: flex;
     align-items: center;
-    box-shadow: $grey2 0px 1px 4px;
-    padding: 20px 20px 20px 20px;
     width: 100%;
+    border-bottom: 1px solid $grey2;
 
     .profile-avatar {
       display: flex;
       align-items: center;
       justify-content: center;
       margin-right: 10px;
+      margin-left: 10px;
 
       img {
         display: flex;
@@ -43,6 +43,7 @@
       .profile-data-user {
         display: flex;
         flex-direction: column;
+        margin-bottom: 10px;
 
         p {
           margin-bottom: 0;

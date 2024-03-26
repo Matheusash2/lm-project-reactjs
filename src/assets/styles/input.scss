@@ -1,0 +1,35 @@
+@import '../styles/configs.scss';
+
+.input {
+  background-color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid $lightBlue1;
+
+  &.disabled {
+    border-color: $grey2;
+  }
+
+  &.focus {
+    border-color: $lightBlue1;
+  }
+
+  &:hover {
+    border-color: $lightBlue1;
+  }
+
+  img {
+    margin-right: 10px;
+    width: 20px;
+  }
+
+  input {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+}

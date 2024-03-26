@@ -23,40 +23,7 @@
     flex-direction: column;
     background-color: $white;
     height: 60%;
-    box-shadow: $grey2 0px 1px 4px;
     padding: 0px 10px;
-
-    .input {
-      background-color: $white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 10px;
-      margin-bottom: 15px;
-      border-radius: 6px;
-      box-shadow: $grey2 0px 1px 4px;
-
-      &.focus {
-        border-color: $lightBlue1;
-        box-shadow: $lightBlue1 0px 1px 4px;
-      }
-
-      &:hover {
-        border-color: $lightBlue1;
-        box-shadow: $lightBlue1 0px 1px 4px;
-      }
-
-      img {
-        margin-right: 10px;
-        width: 20px;
-      }
-
-      input {
-        display: flex;
-        align-items: center;
-        width: 100%;
-      }
-    }
 
     button {
       &.loginBtn {
@@ -65,7 +32,6 @@
         justify-content: center;
         font-family: $fontBold;
         background-color: $lightBlue1;
-        box-shadow: $grey2 0px 1px 4px;
       }
 
       &.disabledBtn {
@@ -74,12 +40,10 @@
 
       &.focus {
         border-color: $lightBlue1;
-        box-shadow: $lightBlue1 0px 1px 4px;
       }
 
       &:hover {
         border-color: $lightBlue1;
-        box-shadow: $lightBlue1 0px 1px 4px;
       }
     }
 
@@ -112,7 +76,7 @@
     padding: 20px;
 
     .logo {
-      max-width: 60%;
+      max-width: 40%;
       margin-right: 100px;
       flex: 1;
       padding: 30px;
@@ -121,6 +85,13 @@
 
     form {
       padding: 20px;
+      width: 30%;
+      border: 1px solid $lightBlue1;
+      border-radius: 8px;
+
+      .container-input {
+        width: 80%;
+      }
     }
   }
 }

@@ -51,7 +51,7 @@ export const Login = () => {
       <img src={logo} alt="Logo da LM" className="logo" />
       <form>
         {error && <p className="error">{error}</p>}
-        <div>
+        <div className="container-input">
           <PublicInput
             icon={userName ? userIcon : userIconGrey}
             name="Nome do usuário"

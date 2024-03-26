@@ -3,16 +3,15 @@
 .container-options {
   display: flex;
   flex: 1;
+  border-right: 1px solid $grey1;
+  padding: 0px 10px;
 
   .container-menu {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-    box-shadow: $grey2 0px 4px 4px;
+    flex: 1;
 
     div {
       display: flex;
@@ -21,13 +20,11 @@
       height: 20%;
       justify-content: center;
       align-items: center;
-      padding: 8px;
-      margin-bottom: 10px;
-      box-shadow: $grey2 0px 1px 4px;
+      margin-bottom: 4px;
+      border: 1px solid $grey1;
 
       &:hover {
         border-color: $lightBlue1;
-        box-shadow: $lightBlue1 0px 1px 4px;
         background-color: $lightBlue1;
 
         p {
