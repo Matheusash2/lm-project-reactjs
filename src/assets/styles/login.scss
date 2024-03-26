@@ -39,11 +39,13 @@
       }
 
       &.focus {
-        border-color: $lightBlue1;
+        border-color: $lightBlue2;
+        background-color: $lightBlue2;
       }
 
       &:hover {
-        border-color: $lightBlue1;
+        border-color: $lightBlue2;
+        background-color: $lightBlue2;
       }
     }
 
@@ -59,13 +61,6 @@
         color: $lightBlue1;
         border-radius: 3px;
         padding: 0px 3px;
-
-        &:hover {
-          color: $white;
-          background-position: right;
-          background-color: $lightBlue1;
-          transition: background-color 0.5s ease;
-        }
       }
     }
   }

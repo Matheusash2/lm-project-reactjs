@@ -5,7 +5,8 @@
   background-color: $white;
   width: 100%;
   height: 6%;
-  box-shadow: $grey2 0px -2px 4px;
+  box-shadow: $grey1 0px -2px 4px;
+  border-top: 1px solid $grey1;
 
   .navigation-footer {
     display: flex;
