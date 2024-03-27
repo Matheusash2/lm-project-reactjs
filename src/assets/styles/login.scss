@@ -31,7 +31,7 @@
         align-items: center;
         justify-content: center;
         font-family: $fontBold;
-        background-color: $lightBlue1;
+        background-color: $darkBlue3;
       }
 
       &.disabledBtn {
@@ -39,13 +39,13 @@
       }
 
       &.focus {
-        border-color: $lightBlue2;
-        background-color: $lightBlue2;
+        border-color: $darkBlue2;
+        background-color: $darkBlue2;
       }
 
       &:hover {
-        border-color: $lightBlue2;
-        background-color: $lightBlue2;
+        border-color: $darkBlue2;
+        background-color: $darkBlue2;
       }
     }
 
@@ -58,7 +58,7 @@
 
       p {
         margin-bottom: 3px;
-        color: $lightBlue1;
+        color: $darkBlue3;
         border-radius: 3px;
         padding: 0px 3px;
       }
@@ -81,7 +81,7 @@
     form {
       padding: 20px;
       width: 30%;
-      border: 1px solid $lightBlue1;
+      border: 1px solid $darkBlue3;
       border-radius: 8px;
 
       .container-input {

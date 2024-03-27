@@ -8,18 +8,18 @@
   padding: 10px;
   margin-bottom: 15px;
   border-radius: 6px;
-  border: 1px solid $lightBlue1;
+  border: 1px solid $darkBlue3;
 
   &.disabled {
     border-color: $grey2;
   }
 
   &.focus {
-    border-color: $lightBlue1;
+    border-color: $darkBlue2;
   }
 
   &:hover {
-    border-color: $lightBlue1;
+    border-color: $darkBlue2;
   }
 
   img {

@@ -16,17 +16,17 @@
 
     div {
       display: flex;
-      background-color: $lightBlue1;
+      background-color: $darkBlue3;
       width: 100%;
       height: 20%;
       justify-content: center;
       align-items: center;
       margin-bottom: 4px;
-      border: 1px solid $lightBlue1;
+      border: 1px solid $darkBlue3;
 
       &:hover {
-        border-color: $lightBlue2;
-        background-color: $lightBlue2;
+        border-color: $darkBlue2;
+        background-color: $darkBlue2;
       }
 
       p {

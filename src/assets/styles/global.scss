@@ -48,13 +48,13 @@ body {
 input {
   font-size: 16px;
   letter-spacing: 0.01em;
-  color: $lightBlue1;
+  color: $darkBlue3;
   border-radius: 0;
   border: none;
   outline: none;
 
   &.focus {
-    border-color: $lightBlue1;
+    border-color: $darkBlue2;
   }
 
   &::placeholder {
@@ -74,7 +74,7 @@ input {
 button {
   width: 100%;
   height: 48px;
-  background-color: $lightBlue1;
+  background-color: $darkBlue3;
   border: none;
   outline: none;
   border-radius: 6px;
@@ -90,7 +90,7 @@ button {
     background-color: $white;
 
     &:hover {
-      background-color: $lightBlue1;
+      background-color: $darkBlue2;
     }
   }
 }
@@ -123,7 +123,7 @@ body {
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: $lightBlue1;
+    background-color: $darkBlue3;
     border-radius: 8px;
   }
 }
