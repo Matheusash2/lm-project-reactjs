@@ -2,20 +2,38 @@ import { useEffect, useState } from 'react';
 import { Layout } from '../components/general/Layout';
 import { Loading } from '../components/general/Loading';
 import avatarIcon from '../assets/images/avatarSolidGrey.svg';
+import { UserServices } from '../services/UserServices';
+
+const userServices = new UserServices();
 
 export const Profile = () => {
   const [name, setName] = useState('');
   const [lastName, setLastName] = useState('');
   const [userName, setUserName] = useState('');
+  const [email, setEmail] = useState('');
+  const [dateOfBirth, setDateOfBirth] = useState('');
+  const [cpf, setCpf] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    const userData = () => {
+    const userData = async () => {
       try {
         setIsLoading(true);
-        setName(localStorage.getItem('name') || '');
-        setLastName(localStorage.getItem('lastName') || '');
-        setUserName(localStorage.getItem('userName') || '');
+        const userId = localStorage.getItem('id') || '';
+        const user = await userServices.getUser(userId);
+        const userData = user.data;
+
+        setName(userData.name || '');
+        setUserName(userData.userName || '');
+        setLastName(userData.lastName || '');
+
+        const employee = await userServices.getEmployee(userId);
+        const employeeData = employee.data;
+
+        setEmail(employeeData.email || '');
+        setDateOfBirth(employeeData.dateOfBirth || '');
+        setCpf(employeeData.cpf || '');
+
         setIsLoading(false);
       } catch (e: any) {
         setIsLoading(false);
@@ -54,7 +72,15 @@ export const Profile = () => {
             </div>
           </div>
           <div className="profile-details">
-            <h1>detalhes</h1>
+            <p>
+              Email do usuário: <span>{email}</span>
+            </p>
+            <p>
+              Data de nascimento: <span>{dateOfBirth}</span>
+            </p>
+            <p>
+              CPF: <span>{cpf}</span>
+            </p>
           </div>
         </div>
       )}
