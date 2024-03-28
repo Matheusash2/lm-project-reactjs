@@ -17,6 +17,7 @@
       padding: 10px;
 
       .content {
+        display: flex;
         flex: 1;
         background-color: $white;
         border: 1px solid $grey1;
