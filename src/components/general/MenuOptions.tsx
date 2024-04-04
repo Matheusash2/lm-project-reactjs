@@ -4,28 +4,50 @@ import userPlusIconWhite from '../../assets/images/userPlusSolidWhite.svg';
 import clientsIconWhite from '../../assets/images/clientsSolidWhite.svg';
 import glassIconWhite from '../../assets/images/glassSolidWhite.svg';
 
+type typeMenuItem = {
+  name: string;
+  icon: string;
+  route: string;
+};
+const menuItems: typeMenuItem[] = [
+  {
+    name: 'Perfil',
+    icon: userCardIconWhite,
+    route: '/profile',
+  },
+  {
+    name: 'Cadastro de usuários',
+    icon: userPlusIconWhite,
+    route: '/user_register',
+  },
+  {
+    name: 'Cadastro de clientes',
+    icon: clientsIconWhite,
+    route: '/client_register',
+  },
+  {
+    name: 'Pesquisa de clientes',
+    icon: glassIconWhite,
+    route: '/client_search',
+  },
+];
+
 export const MenuOptions = () => {
   const navigate = useNavigate();
+
+  const handleItemClick = (route: string) => {
+    navigate(route);
+  };
 
   return (
     <div className="container-options">
       <div className="container-menu">
-        <div onClick={() => navigate('/profile')}>
-          <img src={userCardIconWhite} alt="Perfil do usuário" />
-          <p>Perfil</p>
-        </div>
-        <div onClick={() => navigate('/user_register')}>
-          <img src={userPlusIconWhite} alt="Cadastro de usuários" />
-          <p>Cadastro de usuários</p>
-        </div>
-        <div onClick={() => navigate('/client_register')}>
-          <img src={clientsIconWhite} alt="Cadastro de clientes." />
-          <p>Cadastro de clientes</p>
-        </div>
-        <div onClick={() => navigate('/client_search')}>
-          <img src={glassIconWhite} alt="Pesquisa de clientes." />
-          <p>Pesquisa de clientes</p>
-        </div>
+        {menuItems.map((item, index) => (
+          <div key={index} onClick={() => handleItemClick(item.route)}>
+            <img src={item.icon} alt={item.name} />
+            <p>{item.name}</p>
+          </div>
+        ))}
       </div>
     </div>
   );
