@@ -1,0 +1,25 @@
+@import '../styles/configs.scss';
+
+.container-client-insurance {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin: 10px;
+
+  h2 {
+    display: flex;
+    font-size: 20px;
+    font-family: $fontBold;
+    align-items: center;
+    justify-content: center;
+    color: $black1;
+    border-bottom: 1px solid $grey2;
+  }
+
+  iframe {
+    display: flex;
+    flex: 1;
+    height: 100%;
+    border: none;
+  }
+}
