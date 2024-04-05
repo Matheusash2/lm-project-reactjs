@@ -6,6 +6,7 @@ import { UserRegister } from '../views/UserRegister';
 import { ClientRegister } from '../views/ClientRegister';
 import { ClientProfile } from '../views/ClientProfile';
 import { ClientSearch } from '../views/ClientSearch';
+import { ClientInsurance } from '../views/ClientInsurance';
 
 export const getRouter = (token: string) => {
   if (!token) {
@@ -47,6 +48,11 @@ export const getRouter = (token: string) => {
         path: '/client_search',
         id: 'client_search',
         element: <ClientSearch />,
+      },
+      {
+        path: '/client_insurance',
+        id: 'client_insurance',
+        element: <ClientInsurance />,
       },
     ];
 
