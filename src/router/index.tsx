@@ -44,7 +44,7 @@ export const getRouter = (token: string) => {
         element: <ClientProfile />,
       },
       {
-        path: 'client_search',
+        path: '/client_search',
         id: 'client_search',
         element: <ClientSearch />,
       },
