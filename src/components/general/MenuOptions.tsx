@@ -3,6 +3,7 @@ import userCardIconWhite from '../../assets/images/userCardSolidWhite.svg';
 import userPlusIconWhite from '../../assets/images/userPlusSolidWhite.svg';
 import clientsIconWhite from '../../assets/images/clientsSolidWhite.svg';
 import glassIconWhite from '../../assets/images/glassSolidWhite.svg';
+import envelopeIconWhite from '../../assets/images/envelopeSolidWhite.svg';
 
 type typeMenuItem = {
   name: string;
@@ -29,6 +30,11 @@ const menuItems: typeMenuItem[] = [
     name: 'Pesquisa de clientes',
     icon: glassIconWhite,
     route: '/client_search',
+  },
+  {
+    name: 'Seguro desemprego',
+    icon: envelopeIconWhite,
+    route: '/client_insurance',
   },
 ];
 
