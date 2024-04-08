@@ -1,5 +1,4 @@
 import { ReactElement, useState } from 'react';
-import { Footer } from './Footer';
 import { Header } from './Header';
 import { MenuOptions } from './MenuOptions';
 
@@ -27,7 +26,6 @@ export const Layout: React.FC<LayoutTypesProps> = ({ children, isHome }) => {
           </main>
         )}
       </div>
-      <Footer />
     </div>
   );
 };
