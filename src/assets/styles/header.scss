@@ -11,20 +11,25 @@
   border-bottom: 1px solid $grey1;
 
   .navigation-header {
+    display: flex;
+    list-style-type: none;
     align-items: center;
     justify-content: space-between;
     display: flex;
     margin: 0 30px;
     flex: 1;
+    padding: 0;
 
-    img {
-      display: flex;
-      width: 30px;
-      height: 30px;
+    li {
+      img {
+        display: flex;
+        width: 30px;
+        height: 30px;
 
-      &.logo-header {
-        width: 35px;
-        height: 35px;
+        &.logo-header {
+          width: 35px;
+          height: 35px;
+        }
       }
     }
   }
@@ -33,10 +38,12 @@
     height: 10%;
 
     .navigation-header {
-      img {
-        &.logo-header {
-          width: 50px;
-          height: 50px;
+      li {
+        img {
+          &.logo-header {
+            width: 50px;
+            height: 50px;
+          }
         }
       }
     }

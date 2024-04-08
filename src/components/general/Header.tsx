@@ -6,6 +6,7 @@ import logoutIcon from '../../assets/images/logoutSolid.svg';
 import { useNavigate } from 'react-router-dom';
 import menuIcon from '../../assets/images/barsSolid.svg';
 import menuCloseIcon from '../../assets/images/xmarkSolid.svg';
+import userIcon from '../../assets/images/userSolid.svg';
 
 const loginServices = new LoginServices();
 
@@ -29,29 +30,61 @@ export const Header: React.FC<HeaderTypeSProps> = ({
   const mobile = window.innerWidth <= 768;
   return (
     <div className="container-header">
-      <div className="navigation-header">
-        {!mobile && (
-          <div className="toggle-menu-button" onClick={onToggleMenu}>
-            <img
-              src={!isOpen ? menuIcon : menuCloseIcon}
-              className="menu-button"
-              alt="Menu"
-            />
-          </div>
+      <ul className="navigation-header">
+        {!mobile ? (
+          <>
+            <li className="toggle-menu-button" onClick={onToggleMenu}>
+              <img
+                src={!isOpen ? menuIcon : menuCloseIcon}
+                className="menu-button"
+                alt="Menu"
+              />
+            </li>
+            <li>
+              <img
+                src={logoIcon}
+                alt="Logo lm empréstimos"
+                className="logo-header"
+                onClick={() => navigate('/')}
+              />
+            </li>
+            <li>
+              <img
+                src={logoutIcon}
+                alt="Logout"
+                className="logout-header"
+                onClick={logout}
+              />
+            </li>
+          </>
+        ) : (
+          <>
+            <li>
+              <img
+                src={userIcon}
+                onClick={() => navigate('/profile')}
+                alt="Perfil do usuário"
+              />
+            </li>
+            <li>
+              <img
+                src={logoIcon}
+                alt="Logo lm empréstimos"
+                className="logo-header"
+                onClick={() => navigate('/')}
+              />
+            </li>
+            <li>
+              <img
+                src={logoutIcon}
+                alt="Logout"
+                className="logout-header"
+                onClick={logout}
+              />
+            </li>
+          </>
         )}
-        <img
-          src={logoIcon}
-          alt="Logo lm empréstimos"
-          className="logo-header"
-          onClick={() => navigate('/')}
-        />
-        <img
-          src={logoutIcon}
-          alt="Logout"
-          className="logout-header"
-          onClick={logout}
-        />
-      </div>
+      </ul>
     </div>
   );
 };
