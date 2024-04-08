@@ -4,7 +4,9 @@ export const ClientInsurance = () => {
   return (
     <Layout>
       <div className="container-client-insurance">
-        <h2>Seguro desemprego</h2>
+        <div className="title-insurance">
+          <h2>Seguro desemprego</h2>
+        </div>
         <iframe
           src="https://contatos.trabalho.gov.br/"
           title="Site do formulário para liberação do seguro desemprego."
